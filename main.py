@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -16,36 +17,46 @@ TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
 STATE_FILE = Path(__file__).parent / "state.json"
+RENOTIFY_DAYS = 7
 
 
-def load_state() -> set[str]:
+def load_state() -> dict[str, str]:
+    """Return {state_key: iso_timestamp} of last notification times."""
     if STATE_FILE.exists():
         data = json.loads(STATE_FILE.read_text())
-        return set(data.get("notified", []))
-    return set()
+        return data.get("notified", {})
+    return {}
 
 
-def save_state(notified: set[str]) -> None:
-    STATE_FILE.write_text(json.dumps({"notified": sorted(notified)}, indent=2))
+def save_state(notified: dict[str, str]) -> None:
+    STATE_FILE.write_text(json.dumps({"notified": notified}, indent=2, sort_keys=True))
+
+
+def should_notify(notified: dict[str, str], key: str) -> bool:
+    if key not in notified:
+        return True
+    last = datetime.fromisoformat(notified[key])
+    return datetime.now(timezone.utc) - last >= timedelta(days=RENOTIFY_DAYS)
 
 
 def main() -> None:
     notified = load_state()
-    print(f"Loaded {len(notified)} already-notified book(s) from state.")
+    print(f"Loaded {len(notified)} tracked book(s) from state.")
 
     books = fetch_want_to_read(GOODREADS_RSS)
     print(f"Found {len(books)} book(s) on 'Want to Read' shelf.")
     print(f"Checking against {len(LIBRARY_KEYS)} library/libraries: {', '.join(LIBRARY_KEYS)}")
 
-    newly_notified: list[str] = []
+    newly_notified: dict[str, str] = {}
 
     for book in books:
         title = book["title"]
         author = book["author"]
         state_key = f"{title}|{author}"
 
-        if state_key in notified:
-            print(f"  [skip] {title} — already notified")
+        if not should_notify(notified, state_key):
+            last = notified[state_key][:10]
+            print(f"  [skip] {title} — notified {last}, within {RENOTIFY_DAYS}-day window")
             continue
 
         print(f"  Checking: {title} by {author}")
@@ -73,8 +84,9 @@ def main() -> None:
 
         message = build_message(title, hits)
         send_telegram(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, message)
+        now = datetime.now(timezone.utc).isoformat()
         print(f"    Notification sent ({len(hits)} library/libraries).")
-        newly_notified.append(state_key)
+        newly_notified[state_key] = now
 
     notified.update(newly_notified)
     save_state(notified)
