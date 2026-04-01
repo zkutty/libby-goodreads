@@ -31,7 +31,7 @@ def save_state(notified: set[str]) -> None:
 
 def main() -> None:
     notified = load_state()
-    print(f"Loaded {len(notified)} already-notified entry/entries from state.")
+    print(f"Loaded {len(notified)} already-notified book(s) from state.")
 
     books = fetch_want_to_read(GOODREADS_RSS)
     print(f"Found {len(books)} book(s) on 'Want to Read' shelf.")
@@ -42,41 +42,39 @@ def main() -> None:
     for book in books:
         title = book["title"]
         author = book["author"]
+        state_key = f"{title}|{author}"
 
+        if state_key in notified:
+            print(f"  [skip] {title} — already notified")
+            continue
+
+        print(f"  Checking: {title} by {author}")
+
+        hits: list[dict] = []
         for library_key in LIBRARY_KEYS:
-            state_key = f"{title}|{author}|{library_key}"
-
-            if state_key in notified:
-                print(f"  [skip] {title} @ {library_key} — already notified")
-                continue
-
-            print(f"  Checking: {title} by {author} @ {library_key}")
             try:
                 result = check_availability(library_key, title, author)
             except Exception as exc:
-                print(f"    ERROR looking up '{title}' at {library_key}: {exc}")
+                print(f"    ERROR at {library_key}: {exc}")
                 continue
 
             if result is None:
-                print(f"    Not found in catalog.")
+                print(f"    {library_key}: not in catalog")
                 continue
 
-            print(
-                f"    Found — available={result['isAvailable']}, "
-                f"waitDays={result['estimatedWaitDays']}, "
-                f"copies={result['copiesOwned']}"
-            )
+            result["library_key"] = library_key
+            hits.append(result)
+            status = "AVAILABLE" if result["isAvailable"] else f"~{result['estimatedWaitDays']}d wait"
+            print(f"    {library_key}: {status}")
 
-            message = build_message(
-                title=result["title"],
-                is_available=result["isAvailable"],
-                wait_days=result["estimatedWaitDays"],
-                libby_url=result["libby_url"],
-                library_key=library_key,
-            )
-            send_telegram(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, message)
-            print(f"    Notification sent.")
-            newly_notified.append(state_key)
+        if not hits:
+            print(f"    Not found at any library.")
+            continue
+
+        message = build_message(title, hits)
+        send_telegram(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, message)
+        print(f"    Notification sent ({len(hits)} library/libraries).")
+        newly_notified.append(state_key)
 
     notified.update(newly_notified)
     save_state(notified)
