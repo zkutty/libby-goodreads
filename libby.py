@@ -6,10 +6,12 @@ LIBBY_SEARCH_BASE = "https://libbyapp.com/library/{library_key}/search/query-{qu
 
 HEADERS = {
     "User-Agent": (
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
-    )
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1) "
+        "AppleWebKit/605.1.15 (KHTML, like Gecko) "
+        "Version/14.0.2 Safari/605.1.15"
+    ),
+    "Referer": "https://libbyapp.com/",
+    "Origin": "https://libbyapp.com",
 }
 
 
@@ -22,11 +24,12 @@ def check_availability(library_key: str, title: str, author: str) -> dict | None
     or None if not found in the catalog.
     """
     query = f"{title} {author}".strip()
-    url = f"{THUNDER_BASE}/libraries/{library_key}/search"
+    url = f"{THUNDER_BASE}/libraries/{library_key}/media"
     params = {
         "query": query,
-        "format": "ebook,audiobook-mp3",
+        "mediaType": "ebook",
         "perPage": 3,
+        "x-client-id": "dewey",
     }
 
     response = requests.get(url, params=params, headers=HEADERS, timeout=15)
