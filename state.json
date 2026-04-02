@@ -18,5 +18,271 @@
     "The Shock Doctrine: The Rise of Disaster Capitalism|Naomi Klein": "2026-04-02T02:49:05.439385+00:00",
     "Think and Grow Rich|Napoleon Hill": "2026-04-02T02:48:59.777114+00:00",
     "What If?: Serious Scientific Answers to Absurd Hypothetical Questions|Randall Munroe": "2026-04-02T02:49:13.611754+00:00"
+  },
+  "statuses": {
+    "A Brief History of Time|Stephen W. Hawking|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "A Brief History of Time|Stephen W. Hawking|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "A Brief History of Time|Stephen W. Hawking|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Antifragile: Things That Gain from Disorder|Nassim Nicholas Taleb|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Antifragile: Things That Gain from Disorder|Nassim Nicholas Taleb|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Antifragile: Things That Gain from Disorder|Nassim Nicholas Taleb|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Antifragile: Things That Gain from Disorder|Nassim Nicholas Taleb|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Astrophysics for People in a Hurry|Neil deGrasse Tyson|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Astrophysics for People in a Hurry|Neil deGrasse Tyson|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Astrophysics for People in a Hurry|Neil deGrasse Tyson|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Astrophysics for People in a Hurry|Neil deGrasse Tyson|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Caste: The Origins of Our Discontents|Isabel Wilkerson|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Caste: The Origins of Our Discontents|Isabel Wilkerson|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Caste: The Origins of Our Discontents|Isabel Wilkerson|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Caste: The Origins of Our Discontents|Isabel Wilkerson|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration|Ed Catmull|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration|Ed Catmull|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration|Ed Catmull|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration|Ed Catmull|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Gut: The Inside Story of Our Body's Most Underrated Organ|Giulia Enders|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Gut: The Inside Story of Our Body's Most Underrated Organ|Giulia Enders|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Gut: The Inside Story of Our Body's Most Underrated Organ|Giulia Enders|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Gut: The Inside Story of Our Body's Most Underrated Organ|Giulia Enders|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Influence: The Psychology of Persuasion|Robert B. Cialdini|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Influence: The Psychology of Persuasion|Robert B. Cialdini|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Influence: The Psychology of Persuasion|Robert B. Cialdini|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Influence: The Psychology of Persuasion|Robert B. Cialdini|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Outliers: The Story of Success|Malcolm Gladwell|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Outliers: The Story of Success|Malcolm Gladwell|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Outliers: The Story of Success|Malcolm Gladwell|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Outliers: The Story of Success|Malcolm Gladwell|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Range: Why Generalists Triumph in a Specialized World|David   Epstein|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Range: Why Generalists Triumph in a Specialized World|David   Epstein|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Range: Why Generalists Triumph in a Specialized World|David   Epstein|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Range: Why Generalists Triumph in a Specialized World|David   Epstein|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Red Card: How the U.S. Blew the Whistle on the World's Biggest Sports Scandal|Ken Bensinger|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Red Card: How the U.S. Blew the Whistle on the World's Biggest Sports Scandal|Ken Bensinger|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "SPQR: A History of Ancient Rome|Mary Beard|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "SPQR: A History of Ancient Rome|Mary Beard|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "SPQR: A History of Ancient Rome|Mary Beard|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "SPQR: A History of Ancient Rome|Mary Beard|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The 48 Laws of Power|Robert Greene|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The 48 Laws of Power|Robert Greene|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The 48 Laws of Power|Robert Greene|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The 48 Laws of Power|Robert Greene|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Cause: The American Revolution and its Discontents, 1773-1783|Joseph J. Ellis|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Cause: The American Revolution and its Discontents, 1773-1783|Joseph J. Ellis|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Cause: The American Revolution and its Discontents, 1773-1783|Joseph J. Ellis|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America|Erik Larson|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America|Erik Larson|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America|Erik Larson|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America|Erik Larson|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Everything Store: Jeff Bezos and the Age of Amazon|Brad Stone|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Everything Store: Jeff Bezos and the Age of Amazon|Brad Stone|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Everything Store: Jeff Bezos and the Age of Amazon|Brad Stone|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Shock Doctrine: The Rise of Disaster Capitalism|Naomi Klein|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Shock Doctrine: The Rise of Disaster Capitalism|Naomi Klein|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "The Shock Doctrine: The Rise of Disaster Capitalism|Naomi Klein|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Think and Grow Rich|Napoleon Hill|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Think and Grow Rich|Napoleon Hill|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Think and Grow Rich|Napoleon Hill|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "Think and Grow Rich|Napoleon Hill|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "What If?: Serious Scientific Answers to Absurd Hypothetical Questions|Randall Munroe|berkeleypubliclibrary": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "What If?: Serious Scientific Answers to Absurd Hypothetical Questions|Randall Munroe|nypl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "What If?: Serious Scientific Answers to Absurd Hypothetical Questions|Randall Munroe|oakland": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    },
+    "What If?: Serious Scientific Answers to Absurd Hypothetical Questions|Randall Munroe|sdcl": {
+      "estimatedWaitDays": null,
+      "status": "waitlist"
+    }
   }
 }
