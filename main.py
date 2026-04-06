@@ -127,7 +127,13 @@ def main() -> None:
     state["notified"] = notified
     state["statuses"] = statuses
     save_state(state)
-    print(f"Done. Sent {len(newly_notified)} new notification(s).")
+
+    if not newly_notified:
+        msg = f"✅ Checked {len(books)} book(s) across {len(LIBRARY_KEYS)} library/libraries — no new updates."
+        send_telegram(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, msg)
+        print("Done. No updates — sent quiet summary.")
+    else:
+        print(f"Done. Sent {len(newly_notified)} new notification(s).")
 
 
 if __name__ == "__main__":
